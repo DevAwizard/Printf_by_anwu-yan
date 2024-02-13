@@ -78,9 +78,9 @@ Al implementar funciones variádicas, considere lo siguiente:
 
 **- Parámetros:**
 
-  **- dest:** El va_list que será una copia de src.
+   **- dest:** El va_list que será una copia de src.
   
-  **- src:** El va_list a copiar.
+   **- src:** El va_list a copiar.
 
 Nota: Después de usar va_copy, el va_list copiado (dest) debe ser liberado usando va_end.
 
@@ -92,6 +92,6 @@ Nota: Después de usar va_copy, el va_list copiado (dest) debe ser liberado usan
 
 **- Parámetros:**
 
-   **- ap:** El objeto va_list que fue inicializado por va_start y potencialmente utilizado por va_arg.
+  **- ap:** El objeto va_list que fue inicializado por va_start y potencialmente utilizado por va_arg.
 
 Nota: No llamar a va_end puede resultar en fugas de memoria u otro comportamiento indefinido.
