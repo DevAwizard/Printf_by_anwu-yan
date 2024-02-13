@@ -56,9 +56,13 @@ When implementing variadic functions, consider the following:
 
 #### va_start
 **- Purpose:** Initializes a va_list object to be used with the va_arg and va_end macros. It must be called first before using va_arg.
+
 **- Usage:** va_start(va_list ap, last_fixed_param);
+
 **- Parameters:**
+
     **- ap:** A variable of type va_list that will be initialized to point to the first variable argument.
+    
     **- last_fixed_param:** The name of the last fixed parameter before the variable arguments start. This is used by va_start to locate the first variable argument.
 
 #### va_arg
@@ -70,10 +74,15 @@ When implementing variadic functions, consider the following:
    **- Returns:** The next argument value of the specified type.
 
 #### va_copy
+
 **- Purpose:** Creates a copy of a va_list object. It is useful when you need to traverse the argument list more than once or in nested functions where the original va_list might be altered.
+
 **- Usage:** va_copy(va_list dest, va_list src);
+
 **- Parameters:**
+
   **- dest:** The va_list that will be a copy of src.
+  
   **- src:** The va_list to be copied.
 
 Note: After using va_copy, the copied va_list (dest) must be freed using va_end.
@@ -81,8 +90,11 @@ Note: After using va_copy, the copied va_list (dest) must be freed using va_end.
 #### va_end
 
 **- Purpose:** Cleans up a va_list object after it has been used. It should be called before the function returns.
+
 **- Usage:** va_end(va_list ap);
+
 **- Parameters:**
+
    **- ap:** The va_list object that was initialized by va_start and potentially used by va_arg.
 
 Note: Failing to call va_end can result in memory leaks or other undefined behavior.
