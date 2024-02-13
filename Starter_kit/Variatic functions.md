@@ -66,10 +66,15 @@ When implementing variadic functions, consider the following:
 
 #### va_arg
 **- Purpose:** Retrieves the next argument in the parameter list of the specified type.
+
 **- Usage:** type va_arg(va_list ap, type);
+
 **- Parameters:**
+
    **- ap:** The va_list object initialized by va_start.
+   
    **- type:** The type of the next argument to be retrieved. This type name must match the actual type of the argument.
+   
    **- Returns:** The next argument value of the specified type.
 
 #### va_copy
