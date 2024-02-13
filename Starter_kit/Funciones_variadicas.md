@@ -52,9 +52,9 @@ Al implementar funciones variádicas, considere lo siguiente:
 
 **- Parámetros:**
 
-    **- ap:** Una variable de tipo va_list que será inicializada para apuntar al primer argumento variable.
+   **- ap:** Una variable de tipo va_list que será inicializada para apuntar al primer argumento variable.
     
-    **- ultimo_param_fijo:** El nombre del último parámetro fijo antes de que comiencen los argumentos variables. Esto es utilizado por va_start para localizar el primer argumento variable.
+   **- ultimo_param_fijo:** El nombre del último parámetro fijo antes de que comiencen los argumentos variables. Esto es utilizado por va_start para localizar el primer argumento variable.
 
 #### va_arg
 **- Propósito:** Recupera el siguiente argumento en la lista de parámetros del tipo especificado.
@@ -79,6 +79,7 @@ Al implementar funciones variádicas, considere lo siguiente:
 **- Parámetros:**
 
   **- dest:** El va_list que será una copia de src.
+  
   **- src:** El va_list a copiar.
 
 Nota: Después de usar va_copy, el va_list copiado (dest) debe ser liberado usando va_end.
