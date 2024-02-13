@@ -60,10 +60,9 @@ When implementing variadic functions, consider the following:
 **- Usage:** va_start(va_list ap, last_fixed_param);
 
 **- Parameters:**
-
-    **- ap:** A variable of type va_list that will be initialized to point to the first variable argument.
+   **- ap:** A variable of type va_list that will be initialized to point to the first variable argument.
     
-    **- last_fixed_param:** The name of the last fixed parameter before the variable arguments start. This is used by va_start to locate the first variable argument.
+   **- last_fixed_param:** The name of the last fixed parameter before the variable arguments start. This is used by va_start to locate the first variable argument.
 
 #### va_arg
 **- Purpose:** Retrieves the next argument in the parameter list of the specified type.
