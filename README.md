@@ -1,6 +1,6 @@
-# Printff
 
-## Project introduction
+
+# Project introduction
 
 Welcome to the libftprintf project, a custom implementation of the printf function from the C standard library. As part of the 42 School curriculum, this project challenges you to recreate one of the most complex functions in the C library, focusing on specific conversions to deepen your understanding of variadic functions in C. The goal of ft_printf is not just to mimic the behavior of the original printf function but to explore the intricacies behind its implementation. Through this project, you will enhance your programming skills and gain valuable insights into the workings of variadic functions, all while adhering to the rigorous standards of the 42 School.
 
