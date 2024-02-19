@@ -81,28 +81,30 @@ int printf(const char *format, ...);
 The format string includes text to be printed and format specifiers, which are placeholders for variables that will replace them. The ellipsis (...) indicates that printf can accept an arbitrary number of arguments after the format string, matching the format specifiers in both type and order.
 
 ### How printf Works
-Parsing the Format String: printf reads the format string character by character, identifying format specifiers after each percent sign (%). These specifiers dictate how to interpret and format the subsequent arguments.
 
-Fetching Arguments: Based on the format specifier, printf fetches the next argument from the stack, ensuring the types of these arguments match the specified format.
+- **Parsing the Format String**: printf reads the format string character by character, identifying format specifiers after each percent sign (%). These specifiers dictate how to interpret and format the subsequent arguments.
 
-Formatting and Printing: Arguments are formatted according to their specifiers and added to the output buffer, with any remaining text in the format string also printed.
+- **Fetching Arguments**: Based on the format specifier, printf fetches the next argument from the stack, ensuring the types of these arguments match the specified format.
 
-Handling Flags and Width: Format specifiers can include flags, width, precision, and length modifiers, allowing for detailed formatting control, such as padding numbers with zeros.
+- **Formatting and Printing**: Arguments are formatted according to their specifiers and added to the output buffer, with any remaining text in the format string also printed.
 
-Return Value: printf returns the total number of characters written, excluding the null byte.
+- **Handling Flags and Width**: Format specifiers can include flags, width, precision, and length modifiers, allowing for detailed formatting control, such as padding numbers with zeros.
 
-### Replicating printf
+- **Return Value:** printf returns the total number of characters written, excluding the null byte.
+
+
+### Replicating `printf`
 To replicate printf, the following steps are necessary:
 
-- Parse Format Strings: Implement a function to parse format strings and identify format specifiers, flags, width, precision, and length modifiers.
+- **Parse Format Strings**: Implement a function to parse format strings and identify format specifiers, flags, width, precision, and length modifiers.
 
-- Fetch and Process Arguments: Use C standard library functions like va_start, va_arg, and va_end to fetch and process arguments of various types.
+- **Fetch and Process Arguments**: Use C standard library functions like va_start, va_arg, and va_end to fetch and process arguments of various types.
 
-- Conversion to String Representations: Convert arguments into their string representations according to the format specifiers.
+- **Conversion to String Representations**: Convert arguments into their string representations according to the format specifiers.
 
-- Output Management: Manage a buffer for assembling the output string before printing it to stdout.
+- **Output Management**: Manage a buffer for assembling the output string before printing it to stdout.
 
-Error Handling: Ensure the function returns the number of characters printed or a negative value if an error occurs.
+- **Error Handling:** Ensure the function returns the number of characters printed or a negative value if an error occurs.
 
 ## Implementation overview
 
