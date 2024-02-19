@@ -1,11 +1,13 @@
 
 
-# Project introduction
+# 🖨️ My own printf function 🖨️
+
+## Project introduction
 
 Welcome to the libftprintf project, a custom implementation of the printf function from the C standard library. As part of the 42 School curriculum, this project challenges you to recreate one of the most complex functions in the C library, focusing on specific conversions to deepen your understanding of variadic functions in C. The goal of ft_printf is not just to mimic the behavior of the original printf function but to explore the intricacies behind its implementation. Through this project, you will enhance your programming skills and gain valuable insights into the workings of variadic functions, all while adhering to the rigorous standards of the 42 School.
 
 
-## Table of Contents
+## ⭐ Table of Contents ⭐
 
 - [Project Name](#project-name)
 - [Files to Submit](#files-to-submit)
@@ -69,9 +71,13 @@ Welcome to the libftprintf project, a custom implementation of the printf functi
 - You must use the `ar` command to create your library; using `libtool` is forbidden.
 
 
-## Understanding printf and Its Replication
+## Implementation overview
 
-### Overview of printf Function
+
+### Understanding printf and Its Replication
+
+#### Overview of printf Function
+
 The printf function is a standard output function in C, used to print formatted data to the stdout. It's defined in <stdio.h> and has the following prototype:
 
 ```c
@@ -80,7 +86,7 @@ int printf(const char *format, ...);
 
 The format string includes text to be printed and format specifiers, which are placeholders for variables that will replace them. The ellipsis (...) indicates that printf can accept an arbitrary number of arguments after the format string, matching the format specifiers in both type and order.
 
-### How printf Works
+#### How printf Works
 
 - **Parsing the Format String**: printf reads the format string character by character, identifying format specifiers after each percent sign (%). These specifiers dictate how to interpret and format the subsequent arguments.
 
@@ -93,7 +99,7 @@ The format string includes text to be printed and format specifiers, which are p
 - **Return Value:** printf returns the total number of characters written, excluding the null byte.
 
 
-### Replicating `printf`
+#### Replicating `printf`
 To replicate printf, the following steps are necessary:
 
 - **Parse Format Strings**: Implement a function to parse format strings and identify format specifiers, flags, width, precision, and length modifiers.
@@ -105,25 +111,5 @@ To replicate printf, the following steps are necessary:
 - **Output Management**: Manage a buffer for assembling the output string before printing it to stdout.
 
 - **Error Handling:** Ensure the function returns the number of characters printed or a negative value if an error occurs.
-
-## Implementation overview
-
-The `libftprintf` project involves a detailed recreation of the standard C library's `printf` function. This section dives into the core components of the project, outlining how each part contributes to the overall functionality of `ft_printf`. Through meticulous planning and coding, this project encompasses a range of features:
-
-- **Variadic Functions Handling**: Leveraging C's variadic functions to dynamically handle an unknown number of arguments, which are essential for mimicking the `printf` behavior.
-
-- **Conversion Functions**: Dedicated functions for each conversion specifier supported (`c`, `s`, `p`, `d`, `i`, `u`, `x`, `X`, and `%`). These functions are meticulously crafted to accurately perform conversions and formatting as per the specifications.
-
-- **Modular Design**: The project is structured in a way that each conversion has its own function, facilitating easier testing, debugging, and maintenance.
-
-- **Efficient String Handling**: Efficient management of strings and characters to ensure that the output matches the expected results of the `printf` function, including proper handling of null pointers and unsupported specifiers.
-
-- **Memory Management**: Utilizes dynamic memory allocation judiciously, ensuring that the project remains efficient and leak-free.
-
-- **Cross-Functionality with libft**: Incorporates functions from the `libft` project wherever possible, promoting code reuse and maintaining consistency with previously developed utilities.
-
-- **Compliance with 42 School Norms**: Adheres strictly to the coding standards and project requirements set by the 42 School, including the prohibition of certain functions and adherence to specific compilation methods.
-
-This implementation not only aims to replicate the functionality of `printf` but also serves as a comprehensive learning experience in C programming, focusing on the practical application of variadic functions, string manipulation, and memory management.
 
 ---
